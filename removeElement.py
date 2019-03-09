@@ -1,4 +1,4 @@
-def removeElement(nums: List[int], val: int) -> int:
+def removeElement(nums, val):
     i = 0 
     n = len(nums)
     while (i < n):
@@ -9,4 +9,4 @@ def removeElement(nums: List[int], val: int) -> int:
             i += 1
     return nums 
 
-print(removeElement([1,2,3,4,4,4,5,5,6], 4))
+print(removeElement([1,2,3,4,4,4,5,5,6], 1))
