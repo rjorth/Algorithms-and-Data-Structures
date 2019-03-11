@@ -3,10 +3,10 @@ def removeElement(nums, val):
     n = len(nums)
     while (i < n):
         if nums[i] == val:
-            nums[i] = nums[i-n]
+            nums[i] = nums[n-1]
             n -= 1
         else:
             i += 1
-    return nums 
+    return n 
 
 print(removeElement([1,2,3,4,4,4,5,5,6], 1))
