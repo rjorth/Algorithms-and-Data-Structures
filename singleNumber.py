@@ -1,5 +1,11 @@
 def singleNumber(nums):
-	# in lambda, ^ is == XOR. When you have 2 of the same number, ^ returns 0 
-	return reduce(lambda x,y: x ^ y, nums)
 
-print(singleNumber([2,2,1,1,3,3,4])) 
+	#get sum of unique set * 2 
+	#get sum of nums * 
+	unique = sum(set(nums)) * 2
+	sumNum = sum(nums) 
+	result = unique - sumNum 
+	return result
+
+
+print(singleNumber([2,2,3]))
