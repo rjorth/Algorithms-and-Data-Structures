@@ -13,4 +13,4 @@ def getIntersect(heada,headb):
 			pb = heada
 		else:
 			pb = pb.next
-	return pa
+	return pa 
