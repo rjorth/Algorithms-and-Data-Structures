@@ -1,7 +1,7 @@
 from collections import OrderedDict
 
 def remove(nums):
-	nums[:] = OrderedDict.fromkeys(nums).keys()
+	nums[:] = OrderedDict.fromkeys(nums).keys() #can only be one key 
 	return len(nums)
 
 
