@@ -1,6 +1,6 @@
 def isSymmetric(root):
 	if root:
-		return self.helper(root.left, right.right)
+		return helper(root.left, right.right)
 	else:
 		return True
 
