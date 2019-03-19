@@ -6,7 +6,7 @@ def hasCycle(head):
 	
 	while slow and fast and fast.next:
 		slow = slow.next 
-		fast = fast.next.next
+		fast = fast.next.next #keeps just 1 spot ahead 
 		if slow == fast:
 			return True
 
