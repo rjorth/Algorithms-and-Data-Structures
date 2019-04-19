@@ -10,6 +10,7 @@ def generate(num_rows):
 		row[0], row[-1] = 1, 1 
 
 		for j in range(1, len(row)-1):
+			#vals are equal to sum of upper left and upper right vals 
 			row[j] = result[num - 1][j-1] + result[num-1][j]
 
 		result.append(row)

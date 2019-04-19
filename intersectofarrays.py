@@ -8,7 +8,7 @@ def intersect(nums1, nums2):
 	while True:
 		try:
 			if nums2[p] > nums2[pt]:
-				pt ++ 1 
+				pt += 1 
 			elif nums1[p] < nums2[pt]:
 				p += 1 
 			else:
