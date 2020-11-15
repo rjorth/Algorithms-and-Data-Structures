@@ -1,0 +1,61 @@
+Sub copydata()
+
+
+
+Sheets("result").Cells.Clear
+
+Sheets("template").Range("A1:E12").Copy Destination:=Sheets("result").Range("A1")
+
+Dim lastrow, fareasti, asiai, eurofocusi, eurostarsi As Integer
+fareasti = 3
+asiai = 5
+eurofocusi = 8
+eurostarsi = 11
+
+lastrowresults = Cells(Rows.Count, 1).End(xlUp).Row
+
+For myvar = 1 To 15
+
+  'European Stars
+    
+    If Sheets("data").Cells(myvar, 3).Value = "European Stars" Then
+    Rows(eurostarsi).Insert shift:=xlShiftDown
+    Sheets("data").Rows(myvar).Copy Sheets("result").Rows(eurostarsi)
+    eurostarsi = eurostarsi + 1
+
+'European Focus
+    ElseIf Sheets("data").Cells(myvar, 3).Value = "European Focus" Then
+    MsgBox ("FOUND!")
+    Rows(eurofocusi).Insert shift:=xlShiftDown
+    Sheets("data").Rows(myvar).Copy Sheets("result").Rows(eurofocusi)
+    eurofocusi = eurofocusi + 1
+    eurostarsi = eurostarsi + 1
+    
+ 'Asia
+    ElseIf Sheets("data").Cells(myvar, 3).Value = "Asia" Then
+    Rows(asiai).Insert shift:=xlShiftDown
+    Sheets("data").Rows(myvar).Copy Sheets("result").Rows(asiai)
+    asiai = asiai + 1
+    eurofocusi = eurofocusi + 1
+    eurostarsi = eurostarsi + 1
+    
+     
+ 'Far East
+    ElseIf Sheets("data").Cells(myvar, 3).Value = "Far East" Then
+    Rows(fareasti).Insert shift:=xlShiftDown
+    Sheets("data").Rows(myvar).Copy Sheets("result").Rows(fareasti)
+    fareasti = fareasti + 1
+    asiai = asiai + 1
+    eurofocusi = eurofocusi + 1
+    eurostarsi = eurostarsi + 1
+    
+    Else
+    MsgBox ("No match")
+    End If
+    
+    
+    Next myvar
+
+
+
+End Sub
